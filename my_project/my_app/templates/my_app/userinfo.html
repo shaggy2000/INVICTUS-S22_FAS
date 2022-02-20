@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Info</title>
+</head>
+<body>
+    
+
+    {% block content %}
+        <p>Input in all the user</p>
+        <ul>
+            {% for user in userinfo %}
+                <li>{{user}}</li>
+            {%empty%}
+                <li>No Users have reviewed yet.</li>
+            {% endfor %}
+        </ul>
+    {% endblock content %}
+</body>
+</html>
